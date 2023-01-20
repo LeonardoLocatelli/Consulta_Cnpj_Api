@@ -1,0 +1,30 @@
+server:
+  port: 11000
+
+spring:
+  application:
+    name: @project.artifactId@
+  data:
+    rest:
+      base-path: "/v1/cnpj/{cnpj}"
+
+logging:
+  file: "${desafio.log.dir}/${spring.application.name}.log"
+  level:
+    root: INFO
+    org.springframework.web: ${logging.level.root}
+    logging.level.org.hibernate: ${logging.level.root}
+aft.log.dir: "."
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  health:
+    diskspace:
+      enabled: false
