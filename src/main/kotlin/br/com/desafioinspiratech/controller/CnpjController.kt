@@ -32,7 +32,7 @@ class CnpjController(
             }
         } catch (e: Exception) {
             e.printStackTrace()
-            ApiResponse(HttpStatus.BAD_REQUEST, message = "Erro ao procurar o Cnpj Digite novamente")
+            ApiResponse(HttpStatus.BAD_REQUEST, message = "Quantidade maxima de requisições atingida")
         }
     }
 }

@@ -24,7 +24,7 @@ class teste{
 
     @Test
     fun buscaCnpjIncorreto(){
-        val cnpj = "0247633500010"
+        val cnpj = "024-76335.00010"
         val retorno = cnpjController.BuscaCnpj(cnpj)
         print("\n\n"+ retorno.message + "\n" + retorno.statusCode + ";\n\n")
         Assertions.assertEquals(400, retorno.statusCode)
